@@ -38,11 +38,44 @@ main p {
     padding-right: 0;
 }
 
-/* Styling for the hr on the main card */
 hr {
     background-color: #444;
     border: none;
     height: 2px;
+}
+
+/* Styling for the buttons in the game */
+.main-btn, .game-btn {
+    background-color: rgb(243, 9, 9);
+    font-size: 2rem;
+}
+
+.main-btn:hover, .game-btn:hover, .hsLink:hover {
+    background-color: rgb(116, 116, 116);
+}
+
+.game-btn {
+    margin-top: 20px;
+    padding: 25px;
+    width: 100%;
+}
+
+.submit-btn {
+    border-radius: 5px;
+    font-size: 1.5rem;
+    height: 50px;
+    margin-bottom: 2px;
+    padding-left: 15px;
+    width: 100px;
+}
+
+.btn-block {
+    margin-top: 20px;
+}
+
+.btn-secondary.focus, .btn-secondary:focus, .btn-secondary:not(:disabled):not(.disabled):active {
+    background-color: rgb(116, 116, 116);
+    box-shadow: 0 0 0 0.2rem rgb(0, 136, 255)
 }
 
 /* Media */
