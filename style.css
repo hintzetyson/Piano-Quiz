@@ -4,3 +4,52 @@
     font-size: 16px;
     margin: 20px 0;
 }
+
+/* Main */
+main {
+    margin: 45px 5%;
+}
+
+/* Paragraphs in the main section */
+main p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 2.3em;
+    letter-spacing: 2px;
+}
+
+.instructions li {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+/* Styling for the main card in the center of the screen */
+.card {
+    border: 3px solid #444;
+}
+
+.card-body {
+    padding: 1.3rem;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Styling for the hr on the main card */
+hr {
+    background-color: #444;
+    border: none;
+    height: 2px;
+}
+
+/* Media */
+@media(max-width: 640px) {
+    /* Main page */
+    .card-title {
+        flex-direction: column;
+        text-align: center;
+    }
+}

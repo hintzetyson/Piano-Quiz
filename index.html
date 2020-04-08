@@ -10,19 +10,46 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<div class="firstParagraph">
-    <p>Welcome to my game!</p>
-    <p>This is a quiz game that I made for a University of Utah class using HTML, CSS/Bootstrap, and Javascript!</p>
-    <p>Good luck, have fun!</p>
-</div>
+<body>
+    <div class="container-fluid">
+        <main class="card">
+            <section class="card-body">
+                <div class="firstParagraph">
+                    <p>This is a quiz game that I made for a University of Utah class using HTML, CSS/Bootstrap, and
+                        Javascript!</p>
+                    <p>Good luck, have fun!</p>
+                </div>
 
-<div class="hide instructions">
-    <p>This is a multiple choice quiz with only 1 right answer in each set of questions</p>
-    <ul>
-        <li>You will have 90 seconds to finish</li>
-        <li>For every answer you get right you will receive 5 points!</li>
-        <li>for every answer you get wrong, 5 seconds will be taken off the timer!</li>
-        <li>If finish the quiz with time remaining, that will be added to your final score!</li>
-        <li>Good luck and have fun!</li>
-    </ul>
-</div>
+                <div class="hide instructions">
+                    <p>This is a multiple choice quiz with only 1 right answer in each set of questions</p>
+                    <ul>
+                        <li>You will have 90 seconds to finish</li>
+                        <li>For every answer you get right you will receive 5 points!</li>
+                        <li>for every answer you get wrong, 5 seconds will be taken off the timer!</li>
+                        <li>If finish the quiz with time remaining, that will be added to your final score!</li>
+                        <li>Good luck and have fun!</li>
+                    </ul>
+                </div>
+                <div class="main-game container-fluid hide">
+                    <h4 id="question">Question</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-secondary game-btn game-btn-0">Answer 1</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-secondary game-btn game-btn-1">Answer 2</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-secondary game-btn game-btn-2">Answer 3</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-secondary game-btn game-btn-3">Answer 4</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+</body>
