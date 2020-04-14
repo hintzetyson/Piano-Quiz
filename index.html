@@ -4,57 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piano Quiz</title>
+    <title>Utah Jazz Quiz</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <main class="card">
-            <section class="card-body">
-                <div class="firstParagraph">
-                    <p>This is a quiz game that I made for a University of Utah class using HTML, CSS/Bootstrap, and
-                        Javascript!</p>
-                    <p>Good luck, have fun!</p>
-                </div>
 
-                <div class="hide instructions">
-                    <p>This is a multiple choice quiz with only 1 right answer in each set of questions</p>
-                    
-                     You will have 90 seconds to finish. Each right answer receives 5 points, each wrong results in a loss of 5 seconds.
-                     Additional time will be added to your final score.
-                    
-                </div>
-                <div class="main-game container-fluid hide">
-                    <h4 id="question">Question</h4>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <button type="button" class="btn btn-secondary game-btn game-btn-0">Answer 1</button>
-                        </div>
-                        <div class="col-md-6">
-                            <button type="button" class="btn btn-secondary game-btn game-btn-1">Answer 2</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <button type="button" class="btn btn-secondary game-btn game-btn-2">Answer 3</button>
-                        </div>
-                        <div class="col-md-6">
-                            <button type="button" class="btn btn-secondary game-btn game-btn-3">Answer 4</button>
-                        </div>
-                    </div>
-                </div>
-          
-                <button type="button" class="btn btn-secondary btn-lg btn-block first-btn main-btn">Next</button>
-               
-                <button type="button" class="btn btn-secondary btn-lg btn-block start-btn main-btn hide">Start</button>
-                
-                <button type="button" class="btn btn-secondary btn-lg btn-block next-btn main-btn hide">Next</button>
-            
-                <button type="button" class="btn btn-secondary btn-lg btn-block finish-btn main-btn hide">Finish</button>
-            </section>
-        </main>
+    <div id="timer" class="card w-25 hide">
+        <!-- will stop hiding one the game start-->
+        <p class="big-text">Game Timer</p>
+        <br>
+        <p id="timerDisplay"></p>
+    </div>
 
+    <main class="card w-50" id="main-card">
+        <br>
+        <p>This is my music quiz. It will test the knowledge that you have of different musical notation. The timer will start once you press the START button, you have 120 seconds.
+            Good luck!
+        </p>
+        <br>
+        <button type="button" id="start-btn">START</button>
+    </main>
+
+    <div id="question-card" class="card w-50 hide">
+        <!-- will stop hiding one the game start-->
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="btn-grid">
+            <!-- appending the buttons in JS  -->
+            <br>
+        </div>
+        <!-- Next button that will appear after an awnser is selceted, so the user can move on  -->
+        <button type="button" id="next-btn" class="hide"> Next Question </button>
+        <button type="button" id="finish-btn" class="hide"> Finish </button>
+    </div>
+
+    <div id=score-count class= "hide">
+        <p id = scoreDisplay> Points: 0 </p>
+
+    </div>
+
+
+
+
+    <script src="script.js"></script>
 </body>
+
+</html>

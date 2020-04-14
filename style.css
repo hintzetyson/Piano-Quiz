@@ -1,88 +1,90 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
 
-/* instructions */
-.instructions li {
-    font-size: 16px;
-    margin: 20px 0;
+h1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    font-size: 48px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+body {
+background-color:  rgba(0, 128, 117, 0.795);
 }
 
-/* Main */
-main {
-    margin: 45px 5%;
+p {
+    margin-left: auto;
+    margin-right: auto;
+    padding:15px;
+    font-weight: bold;
 }
 
-/* Paragraphs in the main section */
-main p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 2.3em;
-    letter-spacing: 2px;
+button, .btn {
+    padding: 10px;
+    background-color: rgb(177, 19, 45);
+    border-radius: 2;
+    border-width: 1px;
+    border: black;
+    color: whitesmoke;
+    margin: 10px
 }
 
-.instructions li {
-    font-size: 20px;
-    margin: 20px 0;
-}
-
-/* Styling for the main card in the center of the screen */
 .card {
-    border: 3px solid #444;
-}
-
-.card-body {
-    padding: 1.3rem;
-}
-
-.container-fluid {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-hr {
-    background-color: #444;
-    border: none;
-    height: 2px;
-}
-
-/* Styling for the buttons in the game */
-.main-btn, .game-btn {
-    background-color: rgb(243, 9, 9);
-    font-size: 2rem;
-}
-
-.main-btn:hover, .game-btn:hover, .hsLink:hover {
-    background-color: rgb(116, 116, 116);
-}
-
-.game-btn {
-    margin-top: 20px;
-    padding: 25px;
-    width: 100%;
-}
-
-.submit-btn {
-    border-radius: 5px;
-    font-size: 1.5rem;
-    height: 50px;
-    margin-bottom: 2px;
-    padding-left: 15px;
-    width: 100px;
-}
-
-.btn-block {
-    margin-top: 20px;
-}
-
-.btn-secondary.focus, .btn-secondary:focus, .btn-secondary:not(:disabled):not(.disabled):active {
-    background-color: rgb(116, 116, 116);
-    box-shadow: 0 0 0 0.2rem rgb(0, 136, 255)
-}
-
-/* Media */
-@media(max-width: 640px) {
-    /* Main page */
-    .card-title {
-        flex-direction: column;
-        text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+    padding-top: 20px;
+    text-align: center;
+  
     }
-}
+  .hide {
+    display: none;
+  }
+
+  #question {
+
+    font-weight: bold;
+  }
+
+  #timer {
+    color: black;
+    font-weight: bolder;
+    max-width: 250px;
+    max-height: 160px;
+    background-image: url(background.png);
+    text-align: center;
+    border-style: solid;
+    
+  }
+  
+  .big-text {
+    font-size: 20px;
+    
+  }
+
+  .btn.correct {
+    background-color: chartreuse;
+    color: black;
+  }
+
+  .btn.wrong {
+    background-color: crimson;
+
+  }
+
+  #score-count {
+
+    border: rgb(130, 139, 0);
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    max-width: 160px;
+    margin-left: 40px;
+    margin-top: 40px;
+  }

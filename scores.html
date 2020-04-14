@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Screen</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body onload="welcome()">
+    <main class="card w-75">
+        <h1>High Scores</h1>
+        <div id='score-element'>   
+        </div>
+        <button onclick="scoreSave()">Press to save your score</button>
+        <button onclick="restartGame()">Press to play again</button>
+    </main>
+
+
+    <script>
+        //pulls the users score from local storage
+        var score = localStorage.getItem('score');
+        //allows me to target the div the holds the initials and scores
+        var scoreElement = document.getElementById('score-element')
+
+        //function runs when the user finishes the game and is brought to this page 
+        function welcome() {
+            alert('You scored ' + score + ' points! Press the button to enter your score ');
+        }
+        // function called if the user wishes to save their score 
+        function scoreSave() {
+            //gets the user's initials 
+            var initials = prompt('What are your initials?')
+            //saves the user's initials to local storage 
+            localStorage.setItem("initials", initials)
+            appendScore()
+        }
+        //function to add the users score to the page grabbing the initials and score from local storage 
+        function appendScore() {
+            var node = document.createElement("p");
+            var initials = localStorage.getItem('initials');
+            localStorage.setItem("scoreEl", initials + ": " + score);
+            var textnode = document.createTextNode(localStorage.getItem('scoreEl'));
+            node.appendChild(textnode);
+            document.getElementById("score-element").appendChild(node);
+                
+            
+        }
+        // function to let the user restart the game 
+        function restartGame () {
+            window.location.href = "index.html"
+            
+        }
+
+    </script>
+
+</body>
+
+</html>
